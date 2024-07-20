@@ -88,6 +88,13 @@ const galleryMarkup = images
 
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
-document.addEventListener('DOMContentLoaded', () => {
-  new SimpleLightbox('.gallery a', {});
+new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsSelector: 'gallery img',
+  captionType: 'attr',
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  captionClass: '.sl-caption',
+  captionHTML: true,
 });
